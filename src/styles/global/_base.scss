@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Kanit:600');
+@import url('https://fonts.googleapis.com/css?family=Amiri|Martel:700|Merriweather:700|Source+Serif+Pro');
+
+
+// https://coolors.co/626364-057788-e1e1e1-93a9b0-536a76
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.6;
+  background-color: #fff;
+  min-height: 100vh;
+  color: $color-text-secondary;
+  // background-image: url('../images/handmadepaper.png');
+  background-repeat: repeat;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: $color-text-secondary;
+}
+
+h1, h2, h3, h4 {
+  color: $color-text-primary;
+  font-family: 'Amiri', serif;
+}

@@ -1,0 +1,14 @@
+.vc-text {
+}
+.wrapper-sm {
+  max-width: 560px;
+}
+
+.hr-bt:after {
+  content: '';
+  display: block;
+  background: $color-accent-blue;
+  height: 6px;
+  width: 48px;
+  margin-top: 7px;
+}
