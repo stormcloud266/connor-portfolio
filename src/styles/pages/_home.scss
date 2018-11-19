@@ -14,4 +14,7 @@
   p {
     color: $color-text-secondary;
   }
+  @include whenSmall {
+    padding-left: 20px;
+  }
 }
