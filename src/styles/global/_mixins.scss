@@ -1,0 +1,5 @@
+@mixin whenSmall {
+	@media (max-width: 800px) {
+		@content;
+	}
+}

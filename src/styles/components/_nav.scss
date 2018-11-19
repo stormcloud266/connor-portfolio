@@ -31,4 +31,28 @@
       }
     }
   }
+  @include whenSmall {
+    text-align: center;
+    ul {
+      display: flex;
+      flex-direction: column;
+      // justify-content: center;
+      align-items: center;
+      li {
+        margin-top: 20px;
+      }
+    }
+    .collections-nav {
+      margin-left: 0;
+      li {
+        margin-top: 15px;
+      }
+      a {
+        font-size: $font-body-md;
+      }
+    }
+    a {
+      font-size: $font-body-md;
+    }
+  }
 }

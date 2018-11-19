@@ -9,7 +9,7 @@ const Nav = () => (
       <li>
         <Link to="/poetry">Poetry</Link>
         <ul className="collections-nav">
-          <li><Link to="/collection-1">Collection 1</Link></li>
+          <li><Link to="/collection-1">Collection 1 longer title</Link></li>
           <li><Link to="/collection-2">Collection 2</Link></li>
         </ul>
       </li>

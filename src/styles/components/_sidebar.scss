@@ -9,7 +9,7 @@
   justify-content: center;
   align-items: center;
   padding: 0 20px;
-  z-index: 1000;
+  z-index: 999;
   width: 260px;
 
   h1 {
@@ -32,8 +32,8 @@
       justify-content: center;
       align-items: center;
       border-radius: 100%;
-      background: $color-accent-blue-light;
-      transition: all .3s;
+      background-color: $color-accent-blue-light;
+      transition: color .3s, background-color .3s, transform .3s;
       cursor: pointer;
       svg {
         height: 20px;
@@ -42,7 +42,7 @@
       }
       &:hover {
         box-shadow: 0 3px 15px 0 rgba(0,0,0,.2);
-        background: $color-accent-blue;
+        background-color: $color-accent-blue;
         transform: scale(1.05);
       }
     }
@@ -68,4 +68,68 @@
     text-align: center;
     margin-top: 20px;
   }
+
+  @include whenSmall {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .3s, visibility .6s;
+    right: 0;
+    width: 100%;
+    &__social-icons:before {
+      width: 70%;
+      margin: 0 auto;
+    }
+  }
+}
+
+#mobile-toggle {
+  position: absolute;
+  // left: -10000px;
+  display: none;
+  
+  &:checked ~ .sidebar {
+    visibility: visible;
+    opacity: 1;
+  }
+  @include whenSmall {
+    display: block;
+  }
+
+}
+#mobile-toggle-label {
+  background-color: $color-accent-blue;
+  border-radius: 100%;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  height: 46px;
+  width: 46px;
+  text-align: left;
+  position: fixed;
+  z-index: 1000;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+
+  span {
+    margin-left: 13px;
+    width: 20px;
+    height: 1px;
+    background: white;
+    display: block;
+    &:nth-of-type(1) {
+      margin-bottom: 5px;
+    }
+    &:nth-of-type(2) {
+      margin-bottom: 5px;
+      width: 16px;
+    }
+    &:nth-of-type(3) {
+
+    }
+  }
+  @include whenSmall {
+    display: flex;
+  }
+  
 }

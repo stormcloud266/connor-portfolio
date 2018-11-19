@@ -28,6 +28,14 @@ const Layout = ({ children }) => (
         >
           <html lang="en" />
         </Helmet>
+
+        <label htmlFor="mobile-toggle" id="mobile-toggle-label">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+        <input type="checkbox" id="mobile-toggle" />
+        
         <Sidebar />
         <div className='fade-in'>
           {children}
