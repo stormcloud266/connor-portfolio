@@ -83,8 +83,8 @@
 }
 
 #mobile-toggle {
-  position: absolute;
-  // left: -10000px;
+  position: fixed;
+  left: -10000px;
   display: none;
   
   &:checked ~ .sidebar {
