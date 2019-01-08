@@ -3,6 +3,9 @@ import Nav from './Nav'
 
 const Sidebar = () => (
   <header className="sidebar">
+  <div className="sidebar__inner">
+    
+
   
     <h1>Connor Norton</h1>
 
@@ -20,7 +23,7 @@ const Sidebar = () => (
       <p>Copywrite 2018</p>
       <p>Privacy Policy</p>
     </div>
-
+    </div>
   </header>
 )
 

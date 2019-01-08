@@ -8,9 +8,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0 20px;
   z-index: 999;
   width: 260px;
+  &__inner {
+    padding: 0 20px;
+    width: 100%;
+    overflow-y: scroll;
+  }
 
   h1 {
     line-height: 1.2;
@@ -75,6 +79,11 @@
     transition: opacity .3s, visibility .6s;
     right: 0;
     width: 100%;
+    &__inner {
+      text-align: center;
+      padding: 20px;
+    }
+
     &__social-icons:before {
       width: 70%;
       margin: 0 auto;

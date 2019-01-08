@@ -6,7 +6,7 @@ import Layout from '../components/layout'
 const IndexPage = ({ data }) => (
   <Layout>
     <section className="home page page--vert-center">
-      <h2 className="hr-bt">{data.datoCmsHome.header}</h2>
+      <h1 className="heading hr-bt">{data.datoCmsHome.header}</h1>
       <div className="wrapper-sm" dangerouslySetInnerHTML={{
         __html: data.datoCmsHome.bodyNode.childMarkdownRemark.html
       }}/>

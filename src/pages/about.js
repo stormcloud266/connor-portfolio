@@ -5,10 +5,10 @@ import { graphql } from 'gatsby'
 const About = ({ data }) => (
   <Layout>
     <section className="page page--vert-center about">
-    <h2>{data.datoCmsAbout.header}</h2>
-    <div dangerouslySetInnerHTML={{
-      __html: data.datoCmsAbout.bodyNode.childMarkdownRemark.html
-    }}/>
+    <h1 className="heading hr-bt">{data.datoCmsAbout.header}</h1>
+    <div className="wrapper-sm" dangerouslySetInnerHTML={{
+        __html: data.datoCmsAbout.bodyNode.childMarkdownRemark.html
+      }}/>
     </section>
   </Layout>
 )
