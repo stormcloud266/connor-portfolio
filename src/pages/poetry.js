@@ -8,13 +8,17 @@ const Poetry = ({ data }) => (
     <section className="page poetry">
       {
         data.allDatoCmsPoem.edges.map(poem => {
-          console.log(poem.node.date)
           return (
             <Link to={`/${poem.node.slug}`} key={poem.node.id} className="poetry__poem">
               <div key={poem.node.id}>
-                <div className="poetry__image" 
+              {
+                poem.node.coverphoto !== null ? <div className="poetry__image" 
                 style={{backgroundImage: `url(${poem.node.coverphoto.url})`}}
-                ></div>
+                ></div> :
+                <div className="poetry__image" 
+                style={{backgroundImage: `url(${poem.node.video.thumbnailUrl})`}}
+                ></div> 
+              }
                 <div className="poetry__text">
                   <h2>{poem.node.title}</h2>
                   <Moment format="MMM DD, YYYY">{poem.node.date}</Moment>
@@ -41,6 +45,9 @@ export const query = graphql`
           id
           coverphoto {
             url
+          }
+          video {
+          thumbnailUrl
           }
         }
       }

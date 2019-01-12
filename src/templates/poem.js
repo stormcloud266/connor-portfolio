@@ -9,7 +9,9 @@ const Poem = ({data}) => (
     <div className="poem__inner">
       
       <header>
-        <img src={data.datoCmsPoem.coverphoto.url} alt=""/>
+        {
+          data.coverphoto !== null && <img src={data.datoCmsPoem.coverphoto.url} alt={data.datoCmsPoem.coverphoto.alt !== null ? data.datoCmsPoem.coverphoto.alt : "poem"}/>
+        }
         <h1>{data.datoCmsPoem.title}</h1>
         <Moment className="poem__date" format="MMM DD, YYYY">{data.datoCmsPoem.date}</Moment>
       </header>

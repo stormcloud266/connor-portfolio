@@ -11,9 +11,15 @@ const Collection1 = ({ data }) => (
           return (
             <Link to={`/${poem.node.slug}`} key={poem.node.id} className="poetry__poem">
               <div key={poem.node.id}>
-                <div className="poetry__image" 
-                style={{backgroundImage: `url(${poem.node.coverphoto.url})`}}
-                ></div>
+              {
+               poem.node.coverphoto !== null ? <div className="poetry__image" 
+               style={{backgroundImage: `url(${poem.node.coverphoto.url})`}}
+               ></div> :
+               <div className="poetry__image" 
+               style={{backgroundImage: `url(${poem.node.video.thumbnailUrl})`}}
+               ></div> 
+              }
+                
                 <div className="poetry__text">
                   <h2>{poem.node.title}</h2>
                   <Moment format="MMM DD, YYYY">{poem.node.date}</Moment>
@@ -43,6 +49,9 @@ export const query = graphql`
           date
           coverphoto {
             url
+          }
+          video {
+          thumbnailUrl
           }
         }
       }
