@@ -4,9 +4,6 @@ import Nav from './Nav'
 const Sidebar = () => (
   <header className="sidebar">
   <div className="sidebar__inner">
-    
-
-  
     <h1>Connor Norton</h1>
 
     <Nav />

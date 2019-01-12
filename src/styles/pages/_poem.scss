@@ -14,6 +14,10 @@
     img {
       width: 100%;
     }
+    iframe {
+      width: 100%;
+      min-height: 480px;
+    }
   }
   &__date {
     color: $color-text-tertiary;
@@ -22,7 +26,12 @@
   article {
     max-width: 560px;
     p {
-      margin-bottom: 7px;
+      margin-bottom: 18px;
+    }
+  }
+  @include whenSmall {
+    header iframe {
+      min-height: 300px;
     }
   }
 }

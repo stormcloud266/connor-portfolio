@@ -17,6 +17,9 @@ body {
   background-color: #fff;
   color: $color-text-secondary;
 }
+body.no-scroll {
+  overflow: hidden;
+}
 li {
   list-style: none;
 }
@@ -25,7 +28,7 @@ a {
   color: $color-text-secondary;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5, h6 {
   color: $color-text-primary;
   font-family: 'Amiri', serif;
 }

@@ -12,6 +12,7 @@
   }
   a {
     text-transform: uppercase;
+    letter-spacing: .5px;
     transition: color .3s;
     &:hover {
       color: $color-accent-blue;
@@ -26,6 +27,7 @@
       color: $color-text-tertiary;
       font-size: $font-body-sm;
       text-transform: capitalize;
+      letter-spacing: 0;
       &:hover {
         color: $color-accent-blue;
       }
