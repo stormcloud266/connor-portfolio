@@ -11,7 +11,16 @@ const Contact = ({ data }) => (
           __html: data.datoCmsContact.bodyNode.childMarkdownRemark.html
         }}/>
       </div>
-      <form action="">
+      <form
+        name="contact"
+        method="post"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+        action="/success?no-cache=1"
+        data-netlify-recaptcha="true"
+        >
+        <input type="hidden" name="form-name" value="contact" />
+        <input type="hidden" name="bot-field" />
 
         <div className="input-container">
           <input type="text" id="name"/>
@@ -29,7 +38,8 @@ const Contact = ({ data }) => (
         </div>
 
         <div className="button-container">
-          <button>Send Email</button>
+        <div class="g-recaptcha" data-sitekey="6Lfua4kUAAAAAOMnJjgBm0oJ4cCDJ0L7nZMHbUZW"></div>
+          <button type="submit">Send Email</button>
         </div>
 
       </form>
