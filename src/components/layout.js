@@ -37,7 +37,6 @@ class Layout extends React.Component {
           { name: 'keywords', content: 'sample, something' },
         ]}
       >
-      <script src='https://www.google.com/recaptcha/api.js'></script>
         <html lang="en" />
       </Helmet>
 

@@ -1,9 +1,14 @@
 import React from 'react'
 import Layout from '../components/layout'
 import { graphql } from 'gatsby'
+import Helmet from 'react-helmet';
 
 const Contact = ({ data }) => (
   <Layout>
+    <Helmet>
+      <title>Connor Norton | Let's Get in Touch</title>
+      <script src='https://www.google.com/recaptcha/api.js'></script>
+    </Helmet>
     <section className="contact page vc-text">
       <div className="wrapper-sm contact__body">
         <h2>{data.datoCmsContact.header}</h2>
