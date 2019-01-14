@@ -39,6 +39,9 @@
       background-color: $color-accent-blue-light;
       transition: color .3s, background-color .3s, transform .3s;
       cursor: pointer;
+      a {
+        display: flex;
+      }
       svg {
         height: 20px;
         width: 20px;
@@ -71,6 +74,10 @@
     font-size: 14px;
     text-align: center;
     margin-top: 20px;
+    transition: color .3s;
+    a:hover {
+      color: $color-accent-blue;
+    }
   }
 
   @include whenSmall {
@@ -106,7 +113,7 @@
 
 }
 #mobile-toggle-label {
-  background-color: $color-accent-blue;
+  background-color: lighten($color-accent-blue, 7%);
   border-radius: 100%;
   display: none;
   flex-direction: column;
@@ -116,9 +123,14 @@
   text-align: left;
   position: fixed;
   z-index: 1000;
-  right: 20px;
-  top: 20px;
+  right: 10px;
+  top: 10px;
   cursor: pointer;
+  box-shadow: 0px 3px 10px 0px rgba(black, .3);
+  transition: background-color .3s;
+  &:hover {
+    background-color: $color-accent-blue;
+  }
 
   span {
     margin-left: 13px;

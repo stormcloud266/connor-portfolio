@@ -1,5 +1,12 @@
 .page {
   padding: 40px 20px 80px 280px;
+  a {
+    color: $color-accent-blue;
+    transition: color.3s;
+    &:hover {
+      color: darken($color-accent-blue, 10%);
+    }
+  }
   &--vert-center {
     min-height: 100vh;
     display: flex;
