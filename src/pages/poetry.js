@@ -2,6 +2,7 @@ import React from 'react'
 import Layout from '../components/layout'
 import { Link, graphql } from 'gatsby'
 import Moment from 'react-moment'
+import Img from 'gatsby-image'
 
 const Poetry = ({ data }) => (
   <Layout>
@@ -12,9 +13,11 @@ const Poetry = ({ data }) => (
             <Link to={`/${poem.node.slug}`} key={poem.node.id} className="poetry__poem">
               <div key={poem.node.id}>
               {
-                poem.node.coverphoto !== null ? <div className="poetry__image" 
-                style={{backgroundImage: `url(${poem.node.coverphoto.url})`}}
-                ></div> :
+                poem.node.coverphoto !== null ? 
+                <div className="poetry__image">
+                  <Img fluid={poem.node.coverphoto.fluid} />
+                </div>
+                :
                 <div className="poetry__image" 
                 style={{backgroundImage: `url(${poem.node.video.thumbnailUrl})`}}
                 ></div> 
@@ -44,7 +47,9 @@ export const query = graphql`
           date
           id
           coverphoto {
-            url
+            fluid(maxWidth: 500, imgixParams: { fm: "jpg", auto: "compress" }) {
+              ...GatsbyDatoCmsFluid
+            } 
           }
           video {
           thumbnailUrl

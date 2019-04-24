@@ -18,8 +18,12 @@
   &__image {
     background-size: cover;
     background-position: center;
-    min-height: 200px;
-    width: auto;
+    .gatsby-image-wrapper {
+      min-height: 200px;
+      max-height: 200px;
+      overflow: hidden;
+    }
+  
   }
   &__text {
     padding: 20px;
